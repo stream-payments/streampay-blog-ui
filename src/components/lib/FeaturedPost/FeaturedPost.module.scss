@@ -1,0 +1,87 @@
+.base {
+  @apply relative grid w-full grid-cols-1 items-center gap-5 rounded-md p-5 md:p-10;
+
+  @media screen and (min-width: 475px) {
+    @apply grid-cols-2;
+  }
+
+  & > div {
+    @apply order-2;
+
+    @media screen and (min-width: 475px) {
+      @apply order-1;
+
+      &__long {
+        @apply lg:pr-20;
+      }
+    }
+  }
+
+  & figure {
+    @apply order-1 col-span-1 aspect-[16/12] w-full justify-self-center;
+
+    @media screen and (min-width: 475px) {
+      @apply order-2 aspect-[8/10] max-w-[200px] rotate-[3deg] lg:max-w-[300px];
+    }
+  }
+
+  &__long {
+    @apply lg:col-span-2;
+
+    & figure {
+      @media screen and (min-width: 475px) {
+        @apply order-2 aspect-[8/10] max-w-[200px] rotate-[3deg] lg:aspect-[16/12] lg:max-w-none lg:rotate-0;
+      }
+    }
+  }
+}
+
+.theme {
+  &__passion {
+    @apply bg-[#ffead3];
+
+    & button {
+      @apply border-primary-main hover:bg-primary-light;
+    }
+  }
+
+  &__cool-love {
+    @apply bg-[#dff5fb];
+
+    & button {
+      @apply border-secondary-border hover:bg-secondary-main hover:text-white;
+    }
+  }
+
+  &__onion {
+    @apply bg-[#FBDFFF];
+
+    & button {
+      @apply border-[#540660] hover:bg-[#7e108f] hover:text-white;
+    }
+  }
+
+  &__emerald {
+    @apply bg-[#ADF5D3];
+
+    & button {
+      @apply border-[#0F9857] hover:bg-[#11b468] hover:text-white;
+    }
+  }
+
+  &__blush {
+    @apply bg-[#FFCFCF];
+
+    & button {
+      @apply border-[#9B0808] hover:bg-[#db1313] hover:text-white;
+    }
+  }
+
+  &__heliotrope {
+    @apply bg-[#DEDFFF];
+
+    & button {
+      @apply border-[#0E14B0] hover:bg-[#1219e1] hover:text-white;
+    }
+  }
+}
